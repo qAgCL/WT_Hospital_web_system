@@ -1,4 +1,4 @@
-package app.entities;
+package app.bean;
 
 public class Nurse {
 }
