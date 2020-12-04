@@ -3,6 +3,7 @@ package app.constants;
 public class ConstantNameFromJsp {
     public static final String SIGNIN_PAGE_URI = "WEB-INF/views/signin.jsp";
     public static final String MAIN_PAGE_URI = "WEB-INF/views/main.jsp";
+    public static final String START_PAGE_URI = "index.jsp";
     public static final String SIGNUP_PAGE_URI = "WEB-INF/views/signup.jsp";
     public static final String ERROR_PAGE_URI = "WEB-INF/views/errorPage.jsp";
 

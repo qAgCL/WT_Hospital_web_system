@@ -14,7 +14,9 @@ public class CommandRouter {
         commandsMap.put(CommandName.WRONG_REQUEST, new WrongRequestCommand());
         commandsMap.put(CommandName.GO_TO_SIGNIN, new GoToSignInPageCommand());
         commandsMap.put(CommandName.GO_TO_SIGNUP, new GoToSignUpPageCommand());
-       // commandsMap.put(CommandName.SIGNUP, new SignUpCommand());
+        commandsMap.put(CommandName.SIGNUP, new SignUpCommand());
+        commandsMap.put(CommandName.GO_TO_START,new GoToStartPageCommand());
+        commandsMap.put(CommandName.SIGNOUT,new SignOutCommand());
     }
     public ICommand getCommand(String name){
 

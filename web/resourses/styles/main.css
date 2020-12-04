@@ -143,6 +143,16 @@ iframe {
 .loginForm {
     width: 290px;
 }
+
+.successMessage-title {
+    font-family: Poppins-Bold;
+    font-size: 30px;
+    color: #094711;
+    text-align: center;
+    width: 100%;
+    display: block;
+    padding-bottom: 15px;
+}
 .errorMessage-title {
     font-family: Poppins-Bold;
     font-size: 30px;

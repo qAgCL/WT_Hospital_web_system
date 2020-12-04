@@ -7,6 +7,9 @@
   To change this template use File | Settings | File Templates.
 --%>
 <%@ page contentType="text/html;charset=UTF-8" language="java" %>
+<c:if test="${user!=null}">
+    <c:redirect url="Controller?command=go_to_main"/>
+</c:if>
 <html>
 <head>
     <title>Durka</title>
@@ -28,14 +31,19 @@
 					Invalid login or password
                 </span>
             </c:if>
+            <c:if test="${param.signup == 'success'}">
+                <span class="successMessage-title">
+					Success registration
+                </span>
+            </c:if>
             <span class="loginForm-title">
 					Welcome to the durka, buddy
 				</span>
             <div class=".startPage-form-input">
-                <input class="input" type="text" id="username" name="username" placeholder="Email">
+                <input class="input" type="text" id="username" name="username" placeholder="Email" required>
             </div>
             <div class=".startPage-form-input">
-                <input class="input" type="password" id="password" name="password" placeholder="password">
+                <input class="input" type="password" id="password" name="password" placeholder="password" required>
             </div>
             <div class="startPage-form-btn">
                 <button class="loginForm-btn">

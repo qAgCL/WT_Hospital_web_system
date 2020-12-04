@@ -7,4 +7,6 @@ public enum CommandName {
     SIGNUP,
     GO_TO_SIGNUP,
     GO_TO_MAIN,
+    GO_TO_START,
+    SIGNOUT,
 }

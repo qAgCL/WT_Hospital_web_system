@@ -11,6 +11,6 @@
     <title>Title</title>
 </head>
 <body>
-
+<a href="Controller?command=signout">LogOut</a>
 </body>
 </html>

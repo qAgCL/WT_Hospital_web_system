@@ -4,9 +4,9 @@ import app.bean.User;
 import app.service.exception.ServiceExcep;
 
 
-import java.util.Date;
+import java.sql.Date;
 
 public interface UserService {
-    void registration(String name, String surname, String email, String password, String phone, Date birthDate) throws ServiceExcep;
-    User signIn (String login, String password) throws ServiceExcep;
+    boolean registration(String name, String surname, String email, byte[] password, String phone, Date birthDate) throws ServiceExcep;
+    User signIn (String login, byte[] password) throws ServiceExcep;
 }

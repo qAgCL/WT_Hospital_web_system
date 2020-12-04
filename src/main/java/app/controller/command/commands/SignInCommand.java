@@ -22,7 +22,7 @@ public class SignInCommand implements ICommand {
     public void execute(HttpServletRequest req, HttpServletResponse resp) throws IOException {
 
         String login = req.getParameter(ConstantNameFromJsp.REQUEST_PARAMETER_USERNAME);
-        String password = req.getParameter(ConstantNameFromJsp.REQUEST_PARAMETER_LOGIN);
+        byte[] password = req.getParameter(ConstantNameFromJsp.REQUEST_PARAMETER_LOGIN).getBytes();
 
         User user;
 
