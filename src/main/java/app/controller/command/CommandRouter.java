@@ -10,10 +10,11 @@ public class CommandRouter {
 
     public CommandRouter(){
         commandsMap.put(CommandName.SIGNIN, new SignInCommand());
+        commandsMap.put(CommandName.GO_TO_MAIN, new GoToMainPageCommand());
         commandsMap.put(CommandName.WRONG_REQUEST, new WrongRequestCommand());
         commandsMap.put(CommandName.GO_TO_SIGNIN, new GoToSignInPageCommand());
         commandsMap.put(CommandName.GO_TO_SIGNUP, new GoToSignUpPageCommand());
-        commandsMap.put(CommandName.SIGNUP, new SignUpCommand());
+       // commandsMap.put(CommandName.SIGNUP, new SignUpCommand());
     }
     public ICommand getCommand(String name){
 

@@ -14,4 +14,8 @@
         <url-pattern>/Controller</url-pattern>
     </servlet-mapping>
 
+    <listener>
+        <listener-class>app.controller.ContextListener</listener-class>
+    </listener>
+
 </web-app>

@@ -5,7 +5,10 @@
       <driver-ref>mysql.8</driver-ref>
       <synchronize>true</synchronize>
       <jdbc-driver>com.mysql.cj.jdbc.Driver</jdbc-driver>
-      <jdbc-url>jdbc:mysql://db4free.net:3306/agclhospital</jdbc-url>
+      <jdbc-url>jdbc:mysql://localhost:3306/hospital</jdbc-url>
+      <driver-properties>
+        <property name="serverTimezone" value="UTC" />
+      </driver-properties>
     </data-source>
   </component>
 </project>

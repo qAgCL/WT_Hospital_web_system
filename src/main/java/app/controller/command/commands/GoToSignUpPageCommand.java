@@ -13,7 +13,7 @@ import java.io.IOException;
 public class GoToSignUpPageCommand implements ICommand {
 
     public void execute(HttpServletRequest req, HttpServletResponse resp) throws IOException, ServletException {
-        RequestDispatcher dispatcher = req.getRequestDispatcher(ConstantNameFromJsp.SIGNIN_PAGE_URI);
+        RequestDispatcher dispatcher = req.getRequestDispatcher(ConstantNameFromJsp.SIGNUP_PAGE_URI);
         dispatcher.forward(req, resp);
     }
 }

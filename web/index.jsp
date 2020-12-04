@@ -11,14 +11,14 @@
     <title>Durka</title>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
-    <link rel="icon" type="image/png" href="main.ico">
-    <link rel="stylesheet" type="text/css" href="main.css">
+    <link rel="icon" type="image/png" href="resourses/images/main.ico">
+    <link rel="stylesheet" type="text/css" href="resourses/styles/main.css">
 </head>
 <body>
 <div class="startPage">
     <div class="loginTable">
         <div class="login100-pic js-tilt" data-tilt>
-            <img src="welcome.png">
+            <img src="resourses/images/welcome.png">
         </div>
         <div class="loginForm">
 				<span class="loginForm-title">
@@ -26,12 +26,12 @@
 				</span>
             <div class="startPage-form-btn">
                 <button class="loginForm-btn" onclick="location.href='Controller?command=go_to_signin'">
-                    SingIn
+                    Sing In
                 </button>
             </div>
             <div class="startPage-form-btn">
                 <button class="loginForm-btn" onclick="location.href='Controller?command=go_to_signup'">
-                    SingIn
+                    Sing Up
                 </button>
             </div>
         </div>

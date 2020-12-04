@@ -8,6 +8,7 @@
     <artifactId>Test</artifactId>
     <version>1.0-SNAPSHOT</version>
 
+
     <properties>
         <maven.complier.source>1.8</maven.complier.source>
         <maven.complier.target>1.8</maven.complier.target>
@@ -34,6 +35,19 @@
             <version>2.3.1</version>
             <scope>provided</scope>
         </dependency>
+
+        <dependency>
+            <groupId>javax.servlet</groupId>
+            <artifactId>jstl</artifactId>
+            <version>1.2</version>
+        </dependency>
+
+        <dependency>
+            <groupId>log4j</groupId>
+            <artifactId>log4j</artifactId>
+            <version>1.2.17</version>
+        </dependency>
+
     </dependencies>
 
 </project>

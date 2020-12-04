@@ -3,7 +3,6 @@ package app.controller.command.commands;
 import app.constants.ConstantNameFromJsp;
 import app.controller.command.CommandName;
 import app.controller.command.ICommand;
-
 import javax.servlet.RequestDispatcher;
 import javax.servlet.ServletException;
 import javax.servlet.http.HttpServletRequest;
