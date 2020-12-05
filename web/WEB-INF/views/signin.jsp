@@ -19,6 +19,9 @@
     <link rel="stylesheet" type="text/css" href="resourses/styles/main.css">
 </head>
 <body>
+<header>
+    <jsp:include page="/WEB-INF/views/header.jsp" />
+</header>
 <div class="startPage">
     <div class="loginTable">
         <div class="login100-pic js-tilt" data-tilt>

@@ -15,6 +15,9 @@
     <meta http-equiv="Content-Type" content="text/html; charset=utf-8">
 </head>
 <body>
+<header>
+    <jsp:include page="/WEB-INF/views/header.jsp" />
+</header>
     <c:if test = "${sessionScope.user.roleName == 'Patient'}">
         <c:out value = "${sessionScope.user.name}"/>
         <a href="Controller?command=viewmaps">HashMap</a>

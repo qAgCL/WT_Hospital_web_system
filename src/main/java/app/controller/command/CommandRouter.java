@@ -17,6 +17,7 @@ public class CommandRouter {
         commandsMap.put(CommandName.SIGNUP, new SignUpCommand());
         commandsMap.put(CommandName.GO_TO_START,new GoToStartPageCommand());
         commandsMap.put(CommandName.SIGNOUT,new SignOutCommand());
+        commandsMap.put(CommandName.CHANGELOCALE, new ChangeLocaleCommand());
     }
     public ICommand getCommand(String name){
 

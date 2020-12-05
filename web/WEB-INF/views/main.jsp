@@ -15,6 +15,9 @@
     <title>Title</title>
 </head>
 <body>
+<header>
+    <jsp:include page="/WEB-INF/views/header.jsp" />
+</header>
 <c:if test="${sessionScope.user.roleName=='Patient'}">
     <h1> <c:out value="${sessionScope.user.roleName}"/></h1>
 </c:if>

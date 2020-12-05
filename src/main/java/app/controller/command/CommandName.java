@@ -9,4 +9,5 @@ public enum CommandName {
     GO_TO_MAIN,
     GO_TO_START,
     SIGNOUT,
+    CHANGELOCALE,
 }

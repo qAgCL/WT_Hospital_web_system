@@ -6,19 +6,30 @@
   To change this template use File | Settings | File Templates.
 --%>
 <%@ taglib prefix="c" uri="http://java.sun.com/jsp/jstl/core" %>
-<%@ page contentType="text/html;charset=UTF-8" language="java" %>
+<%@ page contentType="text/html;charset=UTF-8" language="java" pageEncoding="utf-8" %>
+<%@ taglib uri="http://java.sun.com/jsp/jstl/fmt" prefix="fmt"%>
 <c:if test="${user!=null}">
     <c:redirect url="Controller?command=go_to_main"/>
 </c:if>
 <html>
 <head>
-    <title>Durka</title>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <link rel="icon" type="image/png" href="resourses/images/main.ico">
     <link rel="stylesheet" type="text/css" href="resourses/styles/main.css">
+    <fmt:setLocale value="${sessionScope.local}" />
+    <fmt:setBundle basename="local" var="var" />
+    <fmt:message bundle="${var}" key="lang.but.name.en" var="EN"/>
+    <fmt:message bundle="${var}" key="main.hello" var="hello"/>
+    <fmt:message bundle="${var}" key="main.title" var="title"/>
+    <fmt:message bundle="${var}" key="main.signin" var="signin"/>
+    <fmt:message bundle="${var}" key="main.signup" var="signup"/>
+    <title>${title}</title>
 </head>
 <body>
+<header>
+    <jsp:include page="/WEB-INF/views/header.jsp" />
+</header>
 <div class="startPage">
     <div class="loginTable">
         <div class="login100-pic js-tilt" data-tilt>
@@ -26,16 +37,16 @@
         </div>
         <div class="loginForm">
 				<span class="loginForm-title">
-					Welcome to the durka, buddy
+					${hello}
 				</span>
             <div class="startPage-form-btn">
                 <button class="loginForm-btn" onclick="location.href='Controller?command=go_to_signin'">
-                    Sing In
+                    ${signin}
                 </button>
             </div>
             <div class="startPage-form-btn">
                 <button class="loginForm-btn" onclick="location.href='Controller?command=go_to_signup'">
-                    Sing Up
+                    ${signup}
                 </button>
             </div>
         </div>

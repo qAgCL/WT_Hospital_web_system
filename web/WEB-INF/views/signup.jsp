@@ -7,11 +7,19 @@
 --%>
 <%@ taglib prefix="c" uri="http://java.sun.com/jsp/jstl/core" %>
 <%@ page contentType="text/html;charset=UTF-8" language="java" %>
+<%@ taglib uri="http://java.sun.com/jsp/jstl/fmt" prefix="fmt"%>
 <c:if test="${user!=null}">
     <c:redirect url="Controller?command=go_to_main"/>
 </c:if>
 <html>
 <head>
+    <fmt:setLocale value="${sessionScope.local}" />
+    <fmt:setBundle basename="local" var="var" />
+    <fmt:message bundle="${var}" key="signup.welcome" var="welcome"/>
+    <fmt:message bundle="${var}" key="signup.error" var="error"/>
+    <fmt:message bundle="${var}" key="signup.unique" var="unique"/>
+    <fmt:message bundle="${var}" key="main.signin" var="signin"/>
+    <fmt:message bundle="${var}" key="main.signup" var="signup"/>
     <title>Durka</title>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
@@ -19,6 +27,9 @@
     <link rel="stylesheet" type="text/css" href="resourses/styles/main.css">
 </head>
 <body>
+<header>
+    <jsp:include page="/WEB-INF/views/header.jsp" />
+</header>
 <div class="startPage">
     <div class="loginTable">
         <div class="login100-pic js-tilt" data-tilt>
@@ -27,16 +38,16 @@
         <form class="loginForm" action="Controller" method="post">
             <input type="hidden" name="command" value="signUp" />
             <span class="loginForm-title">
-					Welcome to the durka, buddy
+					${signup.welcome}
 				</span>
             <c:if test="${param.signup == 'error'}">
                 <span class="errorMessage-title">
-					SignUp error
+					${signup.error}
                 </span>
             </c:if>
             <c:if test="${param.signup == 'unique'}">
                 <span class="errorMessage-title">
-					This user is already exist
+					${unique}
                 </span>
             </c:if>
             <div class=".startPage-form-input">
