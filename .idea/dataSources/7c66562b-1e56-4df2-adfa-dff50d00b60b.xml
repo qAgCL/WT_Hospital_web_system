@@ -926,84 +926,286 @@ SELECT|sys.sys_config:null
 APPLICATION_PASSWORD_ADMIN,AUDIT_ADMIN,BACKUP_ADMIN,BINLOG_ADMIN,BINLOG_ENCRYPTION_ADMIN,CLONE_ADMIN,CONNECTION_ADMIN,ENCRYPTION_KEY_ADMIN,GROUP_REPLICATION_ADMIN,INNODB_REDO_LOG_ARCHIVE,PERSIST_RO_VARIABLES_ADMIN,REPLICATION_APPLIER,REPLICATION_SLAVE_ADMIN,RESOURCE_GROUP_ADMIN,RESOURCE_GROUP_USER,ROLE_ADMIN,SERVICE_CONNECTION_ADMIN,SESSION_VARIABLES_ADMIN,SET_USER_ID,SYSTEM_USER,SYSTEM_VARIABLES_ADMIN,TABLE_ENCRYPTION_ADMIN,XA_RECOVER_ADMIN!
 </ObjectGrants>
     </user>
-    <table id="290" parent="3" name="roles"/>
-    <table id="291" parent="3" name="users"/>
-    <column id="292" parent="290" name="idRole">
+    <table id="290" parent="3" name="diseasemap"/>
+    <table id="291" parent="3" name="medicines"/>
+    <table id="292" parent="3" name="operations"/>
+    <table id="293" parent="3" name="procedures"/>
+    <table id="294" parent="3" name="roles"/>
+    <table id="295" parent="3" name="users"/>
+    <column id="296" parent="290" name="idMap">
       <Position>1</Position>
       <DataType>int|0s</DataType>
       <NotNull>1</NotNull>
-      <SequenceIdentity>null</SequenceIdentity>
     </column>
-    <column id="293" parent="290" name="role">
+    <column id="297" parent="290" name="idUser">
       <Position>2</Position>
       <DataType>int|0s</DataType>
       <NotNull>1</NotNull>
     </column>
-    <column id="294" parent="290" name="roleName">
+    <column id="298" parent="290" name="idDoctor">
       <Position>3</Position>
-      <DataType>varchar(40)|0s</DataType>
-      <NotNull>1</NotNull>
-    </column>
-    <index id="295" parent="290" name="idRole">
-      <ColNames>idRole</ColNames>
-      <Type>btree</Type>
-    </index>
-    <key id="296" parent="290" name="PRIMARY">
-      <NameSurrogate>1</NameSurrogate>
-      <ColNames>idRole</ColNames>
-      <Primary>1</Primary>
-    </key>
-    <column id="297" parent="291" name="idUser">
-      <Position>1</Position>
       <DataType>int|0s</DataType>
       <NotNull>1</NotNull>
-      <SequenceIdentity>null</SequenceIdentity>
     </column>
-    <column id="298" parent="291" name="name">
-      <Position>2</Position>
-      <DataType>varchar(50)|0s</DataType>
-      <NotNull>1</NotNull>
-    </column>
-    <column id="299" parent="291" name="surname">
-      <Position>3</Position>
-      <DataType>varchar(50)|0s</DataType>
-      <NotNull>1</NotNull>
-    </column>
-    <column id="300" parent="291" name="email">
+    <column id="299" parent="290" name="diagnosis">
       <Position>4</Position>
       <DataType>varchar(50)|0s</DataType>
       <NotNull>1</NotNull>
     </column>
-    <column id="301" parent="291" name="passHash">
+    <column id="300" parent="290" name="arrivaltime">
+      <Position>5</Position>
+      <DataType>date|0s</DataType>
+      <NotNull>1</NotNull>
+    </column>
+    <column id="301" parent="290" name="departuretime">
+      <Position>6</Position>
+      <DataType>date|0s</DataType>
+      <NotNull>1</NotNull>
+    </column>
+    <column id="302" parent="290" name="discharged">
+      <Position>7</Position>
+      <DataType>tinyint(1)|0s</DataType>
+      <NotNull>1</NotNull>
+      <DefaultExpression>0</DefaultExpression>
+    </column>
+    <key id="303" parent="290" name="PRIMARY">
+      <NameSurrogate>1</NameSurrogate>
+      <ColNames>idMap</ColNames>
+      <Primary>1</Primary>
+    </key>
+    <column id="304" parent="291" name="idMedcine">
+      <Position>1</Position>
+      <DataType>int|0s</DataType>
+      <NotNull>1</NotNull>
+      <SequenceIdentity>null</SequenceIdentity>
+    </column>
+    <column id="305" parent="291" name="idMap">
+      <Position>2</Position>
+      <DataType>int|0s</DataType>
+      <NotNull>1</NotNull>
+    </column>
+    <column id="306" parent="291" name="idUser">
+      <Position>3</Position>
+      <DataType>int|0s</DataType>
+      <NotNull>1</NotNull>
+    </column>
+    <column id="307" parent="291" name="idDoctor">
+      <Position>4</Position>
+      <DataType>int|0s</DataType>
+    </column>
+    <column id="308" parent="291" name="idNurse">
+      <Position>5</Position>
+      <DataType>int|0s</DataType>
+    </column>
+    <column id="309" parent="291" name="medicineName">
+      <Position>6</Position>
+      <DataType>varchar(50)|0s</DataType>
+      <NotNull>1</NotNull>
+    </column>
+    <column id="310" parent="291" name="frequency">
+      <Position>7</Position>
+      <DataType>varchar(50)|0s</DataType>
+      <NotNull>1</NotNull>
+    </column>
+    <column id="311" parent="291" name="dayNumber">
+      <Position>8</Position>
+      <DataType>int|0s</DataType>
+      <NotNull>1</NotNull>
+    </column>
+    <column id="312" parent="291" name="discharged">
+      <Position>9</Position>
+      <DataType>tinyint(1)|0s</DataType>
+      <NotNull>1</NotNull>
+    </column>
+    <key id="313" parent="291" name="PRIMARY">
+      <NameSurrogate>1</NameSurrogate>
+      <ColNames>idMedcine</ColNames>
+      <Primary>1</Primary>
+    </key>
+    <column id="314" parent="292" name="idOperation">
+      <Position>1</Position>
+      <DataType>int|0s</DataType>
+      <NotNull>1</NotNull>
+      <SequenceIdentity>null</SequenceIdentity>
+    </column>
+    <column id="315" parent="292" name="idMap">
+      <Position>2</Position>
+      <DataType>int|0s</DataType>
+      <NotNull>1</NotNull>
+    </column>
+    <column id="316" parent="292" name="idUser">
+      <Position>3</Position>
+      <DataType>int|0s</DataType>
+      <NotNull>1</NotNull>
+    </column>
+    <column id="317" parent="292" name="idDoctor">
+      <Position>4</Position>
+      <DataType>int|0s</DataType>
+      <NotNull>1</NotNull>
+    </column>
+    <column id="318" parent="292" name="name">
+      <Position>5</Position>
+      <DataType>varchar(50)|0s</DataType>
+      <NotNull>1</NotNull>
+    </column>
+    <column id="319" parent="292" name="operationDate">
+      <Position>6</Position>
+      <DataType>date|0s</DataType>
+      <NotNull>1</NotNull>
+    </column>
+    <column id="320" parent="292" name="completed">
+      <Position>7</Position>
+      <DataType>tinyint(1)|0s</DataType>
+      <NotNull>1</NotNull>
+    </column>
+    <key id="321" parent="292" name="PRIMARY">
+      <NameSurrogate>1</NameSurrogate>
+      <ColNames>idOperation</ColNames>
+      <Primary>1</Primary>
+    </key>
+    <column id="322" parent="293" name="idProcedure">
+      <Position>1</Position>
+      <DataType>int|0s</DataType>
+      <NotNull>1</NotNull>
+      <SequenceIdentity>null</SequenceIdentity>
+    </column>
+    <column id="323" parent="293" name="idMap">
+      <Position>2</Position>
+      <DataType>int|0s</DataType>
+      <NotNull>1</NotNull>
+    </column>
+    <column id="324" parent="293" name="idUser">
+      <Position>3</Position>
+      <DataType>int|0s</DataType>
+      <NotNull>1</NotNull>
+    </column>
+    <column id="325" parent="293" name="idDoctor">
+      <Position>4</Position>
+      <DataType>int|0s</DataType>
+    </column>
+    <column id="326" parent="293" name="idNurse">
+      <Position>5</Position>
+      <DataType>int|0s</DataType>
+    </column>
+    <column id="327" parent="293" name="procedureName">
+      <Position>6</Position>
+      <DataType>varchar(50)|0s</DataType>
+      <NotNull>1</NotNull>
+    </column>
+    <column id="328" parent="293" name="frequency">
+      <Position>7</Position>
+      <DataType>varchar(50)|0s</DataType>
+      <NotNull>1</NotNull>
+    </column>
+    <column id="329" parent="293" name="dayNumber">
+      <Position>8</Position>
+      <DataType>int|0s</DataType>
+      <NotNull>1</NotNull>
+    </column>
+    <column id="330" parent="293" name="completed">
+      <Position>9</Position>
+      <DataType>tinyint(1)|0s</DataType>
+      <NotNull>1</NotNull>
+    </column>
+    <key id="331" parent="293" name="PRIMARY">
+      <NameSurrogate>1</NameSurrogate>
+      <ColNames>idProcedure</ColNames>
+      <Primary>1</Primary>
+    </key>
+    <column id="332" parent="294" name="idRole">
+      <Position>1</Position>
+      <DataType>int|0s</DataType>
+      <NotNull>1</NotNull>
+      <SequenceIdentity>null</SequenceIdentity>
+    </column>
+    <column id="333" parent="294" name="role">
+      <Position>2</Position>
+      <DataType>int|0s</DataType>
+      <NotNull>1</NotNull>
+    </column>
+    <column id="334" parent="294" name="roleName">
+      <Position>3</Position>
+      <DataType>varchar(40)|0s</DataType>
+      <NotNull>1</NotNull>
+    </column>
+    <index id="335" parent="294" name="idRole">
+      <ColNames>idRole</ColNames>
+      <Type>btree</Type>
+    </index>
+    <key id="336" parent="294" name="PRIMARY">
+      <NameSurrogate>1</NameSurrogate>
+      <ColNames>idRole</ColNames>
+      <Primary>1</Primary>
+    </key>
+    <column id="337" parent="295" name="idUser">
+      <Position>1</Position>
+      <DataType>int|0s</DataType>
+      <NotNull>1</NotNull>
+      <SequenceIdentity>null</SequenceIdentity>
+    </column>
+    <column id="338" parent="295" name="name">
+      <Position>2</Position>
+      <DataType>varchar(50)|0s</DataType>
+      <NotNull>1</NotNull>
+    </column>
+    <column id="339" parent="295" name="surname">
+      <Position>3</Position>
+      <DataType>varchar(50)|0s</DataType>
+      <NotNull>1</NotNull>
+    </column>
+    <column id="340" parent="295" name="email">
+      <Position>4</Position>
+      <DataType>varchar(50)|0s</DataType>
+      <NotNull>1</NotNull>
+    </column>
+    <column id="341" parent="295" name="passHash">
       <Position>5</Position>
       <DataType>varchar(255)|0s</DataType>
       <NotNull>1</NotNull>
     </column>
-    <column id="302" parent="291" name="idRole">
+    <column id="342" parent="295" name="idRole">
       <Position>6</Position>
       <DataType>int|0s</DataType>
       <NotNull>1</NotNull>
     </column>
-    <column id="303" parent="291" name="birthdate">
+    <column id="343" parent="295" name="birthdate">
       <Position>7</Position>
       <DataType>date|0s</DataType>
       <NotNull>1</NotNull>
     </column>
-    <column id="304" parent="291" name="phonenumber">
+    <column id="344" parent="295" name="phonenumber">
       <Position>8</Position>
       <DataType>varchar(50)|0s</DataType>
       <NotNull>1</NotNull>
     </column>
-    <index id="305" parent="291" name="idRole">
+    <index id="345" parent="295" name="email">
+      <ColNames>email</ColNames>
+      <Unique>1</Unique>
+      <Type>btree</Type>
+    </index>
+    <index id="346" parent="295" name="phonenumber">
+      <ColNames>phonenumber</ColNames>
+      <Unique>1</Unique>
+      <Type>btree</Type>
+    </index>
+    <index id="347" parent="295" name="idRole">
       <ColNames>idRole</ColNames>
       <Type>btree</Type>
     </index>
-    <key id="306" parent="291" name="PRIMARY">
+    <key id="348" parent="295" name="PRIMARY">
       <NameSurrogate>1</NameSurrogate>
       <ColNames>idUser</ColNames>
       <Primary>1</Primary>
     </key>
-    <foreign-key id="307" parent="291" name="users_ibfk_1">
+    <key id="349" parent="295" name="email">
+      <ColNames>email</ColNames>
+      <UnderlyingIndexName>email</UnderlyingIndexName>
+    </key>
+    <key id="350" parent="295" name="phonenumber">
+      <ColNames>phonenumber</ColNames>
+      <UnderlyingIndexName>phonenumber</UnderlyingIndexName>
+    </key>
+    <foreign-key id="351" parent="295" name="users_ibfk_1">
       <ColNames>idRole</ColNames>
       <RefTableName>roles</RefTableName>
       <RefColNames>idRole</RefColNames>
